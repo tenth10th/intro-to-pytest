@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Updated to a more respectable versions of pytest (8.0.X)
+- Updated to a more respectable version of pytest (8.0.X)
 
 - Rewrote many tutorials to reflect the current preferred language used in the PyTest documentation. (To be fair: this tutorial was originally written in 2018...)
 
