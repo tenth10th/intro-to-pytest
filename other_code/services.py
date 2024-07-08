@@ -1,19 +1,33 @@
 import time
 from collections import namedtuple
-
+from uuid import uuid4
 
 class ExpensiveClass(object):
     """
     A fake Class that takes a long time to fully initialize
+    (simulating a large file, database, etc...)
     """
 
     def __init__(self):
+        print("$ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $")
         print("(Initializing ExpensiveClass instance...)")
-        time.sleep(0.2)
-        print("(ExpensiveClass instance complete!)")
+        print("$ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $ $")
+        time.sleep(0.1)
+        self.id = str(uuid4())[-6:]
+        print("(ExpensiveClass instance {} complete!)".format(self.id))
+
+    def __repr__(self):
+        return "<ExpensiveClass(id=\"{}\")>".format(self.id)
+
+    def cleanup(self):
+        print("\n(Cleaning up ExpensiveClass {})".format(self.id))
 
 
 FakeRow = namedtuple("FakeRow", ("id", "name", "value"))
+
+
+class SimulatedDBFailure(Exception):
+    pass
 
 
 def db_service(query_parameters):

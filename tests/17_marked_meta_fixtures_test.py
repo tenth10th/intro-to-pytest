@@ -8,12 +8,12 @@ def meta_fixture():
     print("\n*** end meta_fixture ***")
 
 
-# Apply this fixture to everything in this module!
+# Apply meta_fixture to everything in this module!
 pytestmark = mark.usefixtures("meta_fixture")
 
 
 def test_with_meta_fixtures_a():
-    print("\n   Running test_with_meta_fixtures_a")
+    print("   Running test_with_meta_fixtures_a")
 
 
 def test_with_meta_fixtures_b():

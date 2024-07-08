@@ -6,7 +6,7 @@ def test_numbers(number):
     """
     mark can be used to apply "inline" parameterization, without a fixture
     """
-    print("\nRunning test_numbers with {}".format(number))
+    print("\n   Running test_numbers with {}".format(number))
 
 
 @pytest.mark.parametrize("x, y", [(1, 1), (1, 2), (2, 2)])
@@ -14,11 +14,11 @@ def test_dimensions(x, y):
     """
     mark.parametrize can even unpack tuples into named parameters
     """
-    print("\nRunning test_coordinates with {}x{}".format(x, y))
+    print("\n   Running test_coordinates with {}x{}".format(x, y))
 
 @pytest.mark.parametrize("mode", [1, 2, 3], ids=['foo', 'bar', 'baz'])
 def test_modes(mode):
     """
-    The `ids` kwarg can be used to rename the parameters
+    The `ids` kwarg can be used to rename the parameters (much like fixtures)
     """
-    print("\nRunning test_modes with {}".format(mode))
+    print("\n   Running test_modes with {}".format(mode))

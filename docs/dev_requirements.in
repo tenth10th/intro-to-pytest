@@ -1,0 +1,5 @@
+pip-tools
+tox
+flake8
+black
+uv

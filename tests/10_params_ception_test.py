@@ -17,10 +17,10 @@ def numbers_fixture(request):
     yield request.param
 
 
-def test_fixtureception(letters_fixture, numbers_fixture):
+def test_params_ception(letters_fixture, numbers_fixture):
     """
-    Print out our combined fixture "product"
+    Print out our "coordinate" (the product of our combined fixtures)
     """
     coordinate = letters_fixture + str(numbers_fixture)
 
-    print('\nRunning test_fixtureception with "{}"'.format(coordinate))
+    print('\n   Running test_params_ception with "{}"'.format(coordinate))

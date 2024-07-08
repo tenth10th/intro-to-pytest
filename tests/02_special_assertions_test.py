@@ -15,11 +15,11 @@ def test_keyerror_details():
     """
     my_map = {"foo": "bar"}
 
-    with pytest.raises(KeyError) as ke:
+    with pytest.raises(KeyError) as error:
         baz = my_map["baz"]
 
     # Our KeyError should reference the missing key, "baz"
-    assert "baz" in str(ke)
+    assert "baz" in str(error)
 
 
 def test_approximate_matches():

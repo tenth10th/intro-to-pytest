@@ -20,3 +20,7 @@ def yield_fixture():
 
     print("\n(Cleaning up yield_fixture)")
     del(x)
+
+    # Additional yields will not be reached...
+    # Pytest 8+ fails with "fixture function has more than one 'yield'" Error!
+    # yield True

@@ -1,13 +1,17 @@
-## 13: Introduction to Test Marking
+## 15: Custom Marks
 
-PyTest includes a "mark" decorator, which can be used to tag tests and other objects for later reference (and for a more localized type of parameterization, though we'll get to that later).
+In addition to the built in marks, it's possible to create your own custom, user-defined marks - These can be used to categorize or tag your tests, making them easier to target (when you want to run, or not run, specific tests).
 
-Here are some tests with marks already applied:
+(To avoid confusion, Marks should be explicitly configured in pytest. (In newer versions of Pytest, this is required!) In this project, we defined our custom marks in [conftest.py](../conftest.py).)
 
-[tests/11_mark_test.py](https://github.com/pluralsight/intro-to-pytest/blob/master/tests/11_mark_test.py)
+Here are some tests with custom marks already applied:
+
+[tests/15_custom_marks_test.py](../tests/15_custom_marks_test.py)
+
+Let's see what happens:
 
 ```
-pytest -vs tests/11_mark_test.py
+pytest -vs tests/15_custom_marks_test.py
 ```
 
 We ran three tests... Note that even though we marked `asserty_callable_thing` as if it was a test, PyTest still didn't actually run it - `mark` tags are only processed on callables that PyTest recognizes as test cases (and `asserty_callable_thing`'s name does not start with the word "test").
@@ -17,7 +21,7 @@ Admittedly, this code isn't all that interesting on its own. But the real value 
 We can tell PyTest to run a specific named test (a.k.a "node") by name, by appending it to our module path with a "::" separator. For example:
 
 ```
-pytest -v 11_mark_test.py::test_fake_query
+pytest -v 14_mark_test.py::test_fake_query
 ```
 
 (PyTest only collected and ran the named `test_fake_query` case, instead of all the available test cases in the file.)
@@ -60,4 +64,4 @@ While the `mark` decorator can be used to simply "tag" test cases for easier sel
 
 ### Up Next:
 
-[Mark-based Parameters](https://github.com/pluralsight/intro-to-pytest/blob/master/tutorials/14_mark_based_parameters.md)
+[Mark-based Parameters](16_mark_based_parameters.md)

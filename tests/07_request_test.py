@@ -1,11 +1,6 @@
 import pytest
 
 
-def test_with_introspection(introspective_fixture):
-    print("\nRunning test_with_introspection...")
-    assert True
-
-
 @pytest.fixture
 def introspective_fixture(request):
     """
@@ -16,3 +11,8 @@ def introspective_fixture(request):
     print("...Called at {}-level scope".format(request.scope))
     print("   ...In the {} module".format(request.module))
     print("      ...On the {} node".format(request.node))
+
+
+def test_with_introspection(introspective_fixture):
+    print("\nRunning test_with_introspection...")
+    assert True
