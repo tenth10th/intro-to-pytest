@@ -8,7 +8,7 @@
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3109/)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3111/)
 
-_(I have reluctantly forked this repo, as I no longer have access to maintain the [original version](https://github.com/pluralsight/intro-to-pytes) - Please feel free to merge my changes back in, version if you have the permission to do so!)_
+_(I have reluctantly forked this repo, as I no longer have access to maintain the [original version](https://github.com/pluralsight/intro-to-pytes) - Please feel free to merge my recent changes back in, if you have the permission to do so!)_
 
 An introduction to PyTest with lots of simple, hackable examples, currently compatible with Python 2.7 and 3.6+ (up to 3.11).
 
